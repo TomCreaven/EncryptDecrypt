@@ -8,6 +8,11 @@ public class Encrypt2 {
         for (int i = 0; i < toEncrypt.length(); i++){
             outputString += (charConverter(toEncrypt.charAt(i), bitShift));
         }
+        int q = 'q';
+        char ch2 = (char) q;
+        short s = 1;
+        char ch = (char) s;
+
 
 
         return outputString;

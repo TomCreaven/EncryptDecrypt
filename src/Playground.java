@@ -7,25 +7,31 @@ public class Playground {
         return (char)newPos;
     }
 
-
-        public static void main(String[] args) {
-        BigInteger bI = new BigInteger("2134567");
-        int divisor = (int)Math.pow(10,15/2);
-            System.out.println(((Object)divisor).getClass().getName());
-        while(bI.compareTo(new BigInteger("0")) >0){
-            System.out.println(bI.toString());
-                bI = bI.divide(new BigInteger("10"));
-            }
-//            System.out.println((char)97);
-//            System.out.println(((int)'a')-97);
-            System.out.println(bI.compareTo(new BigInteger("0")));
-//            System.out.println(charConverter('a'));
-//            System.out.println(charConverter('z'));
-            System.out.println('a'+ " :" +  (int)'a');
-            System.out.println('z'+ " :" +  (int)'z');
-
-            System.out.println(((122 + 1)%122)+96);
-
-
+    public static int gcd(int a, int b) {
+        while (b > 0) {
+            int c = a % b;
+            a = b;
+            b = c;
         }
+        return a;
+    }
+
+    public static boolean isVowel(char ch) {
+        return "aeiou".indexOf(ch) > -1;
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(gcd(3,7));
+        for (int i = 96; i <= 122; i++){
+            String message = "Char is equal to";
+
+            System.out.println("Char: " + (char)i);
+            System.out.println(isVowel((char)i));
+        }
+
+
+
+
+    }
 }
